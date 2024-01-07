@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBell, faCalendarAlt, faCloudUploadAlt, faVideo, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faCalendarAlt, faCloudUploadAlt, faVideo, faBars, faSearch, faHome } from '@fortawesome/free-solid-svg-icons';
+
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Sidebar from './Sidebar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/Navbar.css';
+
 
 const MyNavbar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -24,7 +26,9 @@ const MyNavbar = () => {
           <Navbar.Toggle aria-controls="navbarSupportedContent" />
           <Navbar.Collapse id="navbarSupportedContent">
             <Nav className="me-auto">
-              <Nav.Link href="#" className='navlinks'>Home</Nav.Link>
+            <Nav.Link href="#" className='navlinks'>
+                <FontAwesomeIcon icon={faHome} /> Home
+              </Nav.Link>
             
               <Nav.Link href="#" className='navlinks'>
                 <FontAwesomeIcon icon={faBell} /> Alerts
@@ -42,9 +46,9 @@ const MyNavbar = () => {
             <Nav className="ml-auto">
               <form className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
+                <button className="btn" type="submit">
+      <FontAwesomeIcon className='btn-search' icon={faSearch} style={{ color: 'white' }} />
+    </button>
               </form>
             </Nav>
           </Navbar.Collapse>

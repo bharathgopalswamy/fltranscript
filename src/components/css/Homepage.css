@@ -1,0 +1,49 @@
+/* Homepage.css */
+.google-calendar-container {
+    display: flex;
+  }
+  
+  .google-calendar-sidebar {
+    width: 200px;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .google-calendar-sidebar div {
+    margin-bottom: 15px;
+  }
+  
+  .google-calendar {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .days-and-hours {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .days-of-week {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time-slots {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .time-slots div {
+    border-top: 1px solid #ddd;
+    padding: 5px;
+    text-align: right;
+  }
+  
+  .google-calendar, .google-calendar-sidebar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Add more styles as needed */
+  
