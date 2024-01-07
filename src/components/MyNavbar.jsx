@@ -19,7 +19,7 @@ const MyNavbar = () => {
   return (
     <>
       <Navbar className='bgnav'>
-        <div className="container-fluid  ">
+        <div className="container-fluid">
           <Navbar.Brand  onClick={toggleSidebar}>
             {isSidebarOpen ? 'EasyTransPro' : <FontAwesomeIcon icon={faBars} className='hamburg' />}
           </Navbar.Brand>

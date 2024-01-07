@@ -65,7 +65,7 @@ const Meeting = () => {
     if (selectedOption === 'notes') {
       return (
         <div className="editor">
-          {/* Your editor component code here */}
+          
           <Button variant="secondary" onClick={() => handleEditorButtonClick('bold')}>
             Bold
           </Button>
@@ -100,9 +100,10 @@ const Meeting = () => {
 
   return (
     <div className="container-fluid mt-4">
-      <Row className="video-options-row">
+      <Row className='row'>
+        <div className='meetnav'></div>
         <Col md={6} className="video-col">
-          <div className="meeting-video video">
+          <div className="meeting-video video" >
             <video ref={videoRef} controls width="100%" height="100%">
               <source src="https://youtu.be/r4ZEvFkigQ0?si=B8YZhH_ptVdRZtsB" type="video/mp4" />
             </video>
@@ -149,6 +150,7 @@ const Meeting = () => {
             </div>
           </div>
         </Col>
+        <div className='vl'></div>
         <Col md={6} className="options-col">
           <div className="other-options">
             <MyButtons />

@@ -55,5 +55,14 @@
   
   .meetnav{
     padding: 20px;
-    border: 2px solid #000;
   }
+
+   
+   .vl{
+    border-left: 20px solid rgba(50, 43, 29, 0.598);
+    height: 100vh;
+    position: absolute;
+    left:55%;
+    margin-left: -3px;
+    
+   }
