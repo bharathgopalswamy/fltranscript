@@ -1,0 +1,17 @@
+.frwdicon{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #ffa500;
+   
+    
+    
+}
+.playicon, .pauseicon{
+    font-size: 20px;
+    color: #ffa500;
+}
+.video-controls{
+    
+    padding: 10px;
+    
+}

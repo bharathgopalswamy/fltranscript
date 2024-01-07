@@ -1,0 +1,16 @@
+.bgnav{
+  background-color: #ffa500;
+}
+.hamburg{
+  color: #f5f5f5;
+}
+.navlinks{
+  color: #f5f5f5;
+}
+.btn{
+  outline: #fff;
+}
+.btn:hover{
+  color: #fff;
+  
+}
