@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Row, Col, Button, Card, Form } from 'react-bootstrap';
+import { Row, Col, Button } from 'react-bootstrap';
 import {
   FaPlay,
   FaPause,
@@ -14,7 +14,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStickyNote, faFileAlt, faComments, faCode, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import './css/Meeting.css';
 import Snippets from './Snippets';
-
 
 const Meeting = () => {
   const videoRef = useRef(null);
@@ -44,7 +43,7 @@ const Meeting = () => {
 
   const MyButtons = () => {
     return (
-      <div className="button-container">
+      <div className="button-container mt-2 d-flex">
         <button onClick={() => handleButtonClick('notes')}>
           <FontAwesomeIcon icon={faStickyNote} />
           <span>Notes</span>
@@ -83,11 +82,6 @@ const Meeting = () => {
       return <div className="notes-content">{showNotes && <Snippets />}</div>;
     }
     return null;
-  };
-
-  const handleEditorButtonClick = (editorOption) => {
-    // Handle editor button click logic
-    console.log(`Editor button clicked: ${editorOption}`);
   };
 
   return (
@@ -129,10 +123,10 @@ const Meeting = () => {
               <FaEyeSlash className="hidevideoicon icon" onClick={handleHideVideo} />
             </div>
           </div>
+          <MyButtons />
         </Col>
         <Col md={4} className="options-col">
           <div className="other-options p-4">
-            <MyButtons />
             <Editor />
           </div>
         </Col>

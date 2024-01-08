@@ -1,21 +1,29 @@
-/* Add this to your existing CSS or create a new CSS file */
+.container-fluid {
+  margin-top: 0;
+}
+
 .meeting-container {
-  margin: 0; /* Remove default margin */
+  margin-top: 20px; 
 }
 
 .video-col {
-  padding: 0;
+  position: relative;
 }
 
 .meeting-video {
   position: relative;
 }
 
+.video {
+  border: 1px solid #ddd;
+  border-radius: 8px; 
+}
+
 .video-controls {
   position: absolute;
-  
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 65%;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 5px;
@@ -23,41 +31,41 @@
 }
 
 .icon-container {
-  margin: 0 8px;
-  cursor: pointer;
-  font-size: 20px;
-}
-
-.editor {
-  margin-top: 20px;
-}
-
-.other-options {
-  background-color: #f4f4f4;
-  height: 100%;
-  overflow-y: auto;
+  margin-right: 40px;
+  cursor: pointer; 
 }
 
 .button-container {
   display: flex;
-  flex-direction: column;
-  padding: 20px;
+  justify-content: center;
+  margin-top: 10px; 
 }
 
 .button-container button {
-  margin-bottom: 10px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  background-color: #007bff;
-  color: #fff;
+  margin: 100px 10px; 
+  background-color: #007bff; 
+  color: #fff; 
   border: none;
+  padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.button-container button span {
-  margin-left: 10px;
+.notes-content {
+  margin-top: 20px; 
 }
 
-/* Add more styling as needed */
+
+.notes-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.notes-content li {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
