@@ -1,14 +1,26 @@
 import React, { useRef, useState } from 'react';
-import { Row, Col, Button } from 'react-bootstrap';
-import { FaPlay, FaPause, FaForward, FaBackward, FaVolumeUp, FaComment, FaCrop, FaEyeSlash } from 'react-icons/fa';
+import { Row, Col, Button, Card, Form } from 'react-bootstrap';
+import {
+  FaPlay,
+  FaPause,
+  FaForward,
+  FaBackward,
+  FaVolumeUp,
+  FaComment,
+  FaCrop,
+  FaEyeSlash,
+} from 'react-icons/fa';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStickyNote, faFileAlt, faComments, faCode, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import './css/Meeting.css';
+import Snippets from './Snippets';
+
 
 const Meeting = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [showNotes, setShowNotes] = useState(false);
 
   const handlePlayPause = () => {
     const video = videoRef.current;
@@ -59,36 +71,16 @@ const Meeting = () => {
 
   const handleButtonClick = (option) => {
     setSelectedOption(option);
+    if (option === 'notes') {
+      setShowNotes(true);
+    } else {
+      setShowNotes(false);
+    }
   };
 
   const Editor = () => {
     if (selectedOption === 'notes') {
-      return (
-        <div className="editor">
-          
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('bold')}>
-            Bold
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('italic')}>
-            Italic
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('underline')}>
-            Underline
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('h1')}>
-            H1
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('h2')}>
-            H2
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('h3')}>
-            H3
-          </Button>
-          <Button variant="secondary" onClick={() => handleEditorButtonClick('insertTemplate')}>
-            Insert Template
-          </Button>
-        </div>
-      );
+      return <div className="notes-content">{showNotes && <Snippets />}</div>;
     }
     return null;
   };
@@ -99,60 +91,47 @@ const Meeting = () => {
   };
 
   return (
-    <div className="container-fluid mt-4">
-      <Row className='row'>
-        <div className='meetnav'></div>
-        <Col md={6} className="video-col">
-          <div className="meeting-video video" >
+    <div className="container-fluid mt-0">
+      <Row className="meeting-container">
+        <Col md={8} className="video-col">
+          <div className="meeting-video video">
             <video ref={videoRef} controls width="100%" height="100%">
-              <source src="https://youtu.be/r4ZEvFkigQ0?si=B8YZhH_ptVdRZtsB" type="video/mp4" />
+              <source
+                src="https://youtu.be/r4ZEvFkigQ0?si=B8YZhH_ptVdRZtsB"
+                type="video/mp4"
+              />
             </video>
           </div>
           <div className="video-controls mt-4 d-flex align-items-center">
             <div className="icon-container">
-              <div className="icon-background">
-                <FaBackward className="bckwdicon icon" onClick={handleBackward} />
-              </div>
+              <FaBackward className="bckwdicon icon" onClick={handleBackward} />
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                {isPlaying ? (
-                  <FaPause className="playicon icon" onClick={handlePlayPause} />
-                ) : (
-                  <FaPlay className="pauseicon icon" onClick={handlePlayPause} />
-                )}
-              </div>
+              {isPlaying ? (
+                <FaPause className="playicon icon" onClick={handlePlayPause} />
+              ) : (
+                <FaPlay className="pauseicon icon" onClick={handlePlayPause} />
+              )}
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                <FaForward className="frwdicon icon" onClick={handleForward} />
-              </div>
+              <FaForward className="frwdicon icon" onClick={handleForward} />
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                <FaVolumeUp className="speakericon icon" />
-              </div>
+              <FaVolumeUp className="speakericon icon" />
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                <FaComment className="commenticon icon" />
-              </div>
+              <FaComment className="commenticon icon" />
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                <FaCrop className="cropicon icon" />
-              </div>
+              <FaCrop className="cropicon icon" />
             </div>
             <div className="icon-container">
-              <div className="icon-background">
-                <FaEyeSlash className="hidevideoicon icon" onClick={handleHideVideo} />
-              </div>
+              <FaEyeSlash className="hidevideoicon icon" onClick={handleHideVideo} />
             </div>
           </div>
         </Col>
-        <div className='vl'></div>
-        <Col md={6} className="options-col">
-          <div className="other-options">
+        <Col md={4} className="options-col">
+          <div className="other-options p-4">
             <MyButtons />
             <Editor />
           </div>
