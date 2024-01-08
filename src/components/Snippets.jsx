@@ -23,7 +23,7 @@ const Snippets = () => {
 
   return (
     <div>
-      <ReactQuill
+      <ReactQuill className='react-quill'
         value={editorContent}
         onChange={(value) => setEditorContent(value)}
         modules={modules}

@@ -1,54 +1,32 @@
-/* CSS for Snippets component */
-
 /* Container styling */
-.container {
+.editor-container {
     width: 70%;
     margin: 0 auto;
-  }
-  
-  /* Navbar styling */
-  .navbar {
-    background-color: #007bff;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar button {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-  }
-  
-  .nav-item {
-    color: #fff;
-    margin-left: auto;
-    font-weight: bold;
+    padding: 20px;
   }
   
   /* Editor styling */
   .react-quill {
-    border: 1px solid #a8a8a8;
+    
+    border-radius: 8px;
+    margin-top: 0px;
     padding: 10px;
-    margin-top: 10px;
-    height: 400px;
+    height: 300px;
     overflow-y: auto;
   }
   
-  /* Add Comment button styling */
-  .comment-btn {
+  /* Button styling */
+  .commentbtn {
     background-color: #007bff;
     color: #fff;
     border: none;
     padding: 12px 20px;
     cursor: pointer;
     margin-top: 20px;
+    margin-left: 150px;
   }
   
-  .comment-btn:hover {
+  .commentbtn:hover {
     background-color: #0056b3;
   }
   
@@ -59,12 +37,10 @@
     margin-top: 20px;
   }
   
-  li {
+  ul li {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     margin-bottom: 20px;
   }
-  
-  /* Add more styles as needed */
   
