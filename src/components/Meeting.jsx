@@ -14,6 +14,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStickyNote, faFileAlt, faComments, faCode, faChartBar } from '@fortawesome/free-solid-svg-icons';
 import './css/Meeting.css';
 import Snippets from './Snippets';
+import Transcriptor from './Transcriptor'; 
 
 const Meeting = () => {
   const videoRef = useRef(null);
@@ -80,6 +81,9 @@ const Meeting = () => {
   const Editor = () => {
     if (selectedOption === 'notes') {
       return <div className="notes-content">{showNotes && <Snippets />}</div>;
+    }
+    else if (selectedOption === 'transcript') {
+      return <div className="transcriptor-content">{!showNotes && <Transcriptor />}</div>;
     }
     return null;
   };
