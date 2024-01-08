@@ -1,57 +1,52 @@
 /* CSS for Snippets component */
 
 /* Container styling */
-
- 
-  .navbar {
-    background-color: #007bff; 
+.navbar {
+    background-color: #007bff;
     padding: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 10px;
   }
   
   .nav-item {
-    display: inline-block;
-    margin-right: 20px; /* Adjust spacing between navigation items */
-    color: #fff; /* Set text color for navigation items */
-    cursor: pointer;
+    color: #fff;
+    margin-left: auto;
   }
   
-  /* Heading styles */
-  h1, h2, h3 {
-    color: #333; /* Set heading text color */
-  }
-  
-  /* Form styles */
-  form {
-    margin-top: 10px; /* Add space between headings and form */
-  }
-  
-  input[type="text"] {
-    height: 300px;
-    width: 100%; /* Adjust the width of the input field */
-    padding: 8px; /* Add padding to the input field */
-  }
-  
-  button[type="submit"] {
-    background-color: #007bff; /* Set button background color */
-    color: #fff; /* Set button text color */
-    border: none;
-    padding: 8px 12px; /* Adjust padding for the button */
-    cursor: pointer;
+  /* Editor styling */
+  .editor {
+    border: 2px solid #a8a8a8;
+    padding: 10px;
+    margin-top: 10px;
+    height: 400px;
+    overflow-y: auto;
   }
   
   /* Comments styles */
   ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px; /* Add space between form and comments */
+    margin-top: 10px;
   }
   
   li {
-    border: 1px solid #ddd; /* Add border around each comment */
+    border: 1px solid #ddd;
     border-radius: 5px;
     padding: 10px;
-    margin-bottom: 10px; /* Add space between comments */
+    margin-bottom: 10px;
   }
-  
-  /* Add more styles as needed */
+  .commentbtn{
+    padding: 10px;
+    margin: 20px;
+    margin-left: 150px;
+  }
   
