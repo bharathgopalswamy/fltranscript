@@ -1,0 +1,57 @@
+/* CSS for Snippets component */
+
+/* Container styling */
+
+ 
+  .navbar {
+    background-color: #007bff; 
+    padding: 10px;
+  }
+  
+  .nav-item {
+    display: inline-block;
+    margin-right: 20px; /* Adjust spacing between navigation items */
+    color: #fff; /* Set text color for navigation items */
+    cursor: pointer;
+  }
+  
+  /* Heading styles */
+  h1, h2, h3 {
+    color: #333; /* Set heading text color */
+  }
+  
+  /* Form styles */
+  form {
+    margin-top: 10px; /* Add space between headings and form */
+  }
+  
+  input[type="text"] {
+    height: 300px;
+    width: 100%; /* Adjust the width of the input field */
+    padding: 8px; /* Add padding to the input field */
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff; /* Set button background color */
+    color: #fff; /* Set button text color */
+    border: none;
+    padding: 8px 12px; /* Adjust padding for the button */
+    cursor: pointer;
+  }
+  
+  /* Comments styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px; /* Add space between form and comments */
+  }
+  
+  li {
+    border: 1px solid #ddd; /* Add border around each comment */
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px; /* Add space between comments */
+  }
+  
+  /* Add more styles as needed */
+  

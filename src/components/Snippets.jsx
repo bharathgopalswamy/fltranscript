@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './css/Snippets.css';
 
 const Snippets = () => {
  const [comments, setComments] = useState([]);
@@ -12,11 +13,13 @@ const Snippets = () => {
 
  return (
     <div>
-      <h1>H1 H2 H3</h1>
-      <h2>BIUS</h2>
-      <h3>Comments</h3>
+      <div className="navbar">
+        <div className="nav-item">H1 H2 H3</div>
+        <div className="nav-item">BIUS</div>
+        <div className="nav-item">Comments</div>
+      </div>
       <form onSubmit={addComment}>
-        <input type="text" name="content" placeholder="Type your comment" />
+        <input type="text" name="content"/>
         <button type="submit">Add Comment</button>
       </form>
       <ul>
